@@ -76,9 +76,9 @@ def countQMarks(letters) : #counts question marks in phrase (thats how the dicti
 
     return count
 
-def decider(letters) : #finds the longest part of phrase provided 
+def decider(letters) : #finds the longest part of phrase provided
 
-    prod = letters.split("?", countQMarks())
+    prod = letters.split("?", countQMarks(letters))
 
     if len(prod[0]) > len(prod[1]) :
 
@@ -88,13 +88,15 @@ def decider(letters) : #finds the longest part of phrase provided
 
 
 def use(letters) :
-    
+
+    #ADD FUNCTIONALITY FOR ALL Q MARK SITUATIONS
+
     #working function - you put in a part of a word and the rest with q marks.
     #eg i want words starting with l and ending with e that are 4 characters long
     #usage : use("l??e")
-   
+
     parser = myParser()
-    parser.parser.feed(requestMaker(letters))
+    parser.feed(requestMaker(letters))
     return clean(decider(letters), parser, len(letters))
 
 
