@@ -5,7 +5,7 @@ from HTMLParser import HTMLParser
 import urllib2
 
 
-class myParser(HTMLParser) :
+class myParser(HTMLParser) : #customizing Python's built in parser, it essentially just adds all links to list
 
 
     def __init__(self) :
@@ -23,7 +23,7 @@ class myParser(HTMLParser) :
                     self.words.append(value)
 
 
-def clean(letters, parser, length) :
+def clean(letters, parser, length) : #receives list from parser and produces only the results i want
 
     sug = parser.words
     corrected = []
@@ -43,7 +43,7 @@ def clean(letters, parser, length) :
 
 
 
-def requestMaker(letters) :
+def requestMaker(letters) : #generates request url to website
 
     url = "https://www.onelook.com/?w="
 
@@ -65,7 +65,7 @@ def requestMaker(letters) :
     return html
 
 
-def countQMarks(letters) :
+def countQMarks(letters) : #counts question marks in phrase (thats how the dictionary works) for splitting
 
     count = 0
     for let in letters :
@@ -76,7 +76,7 @@ def countQMarks(letters) :
 
     return count
 
-def decider(letters) :
+def decider(letters) : #finds the longest part of phrase provided 
 
     prod = letters.split("?", countQMarks())
 
@@ -87,8 +87,12 @@ def decider(letters) :
     return prod[1]
 
 
-def use(letters) : #WORKS
-
+def use(letters) :
+    
+    #working function - you put in a part of a word and the rest with q marks.
+    #eg i want words starting with l and ending with e that are 4 characters long
+    #usage : use("l??e")
+   
     parser = myParser()
     parser.parser.feed(requestMaker(letters))
     return clean(decider(letters), parser, len(letters))
