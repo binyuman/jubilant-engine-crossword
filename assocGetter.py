@@ -3,6 +3,7 @@ import urllib2
 from HTMLParser import HTMLParser
 
 class myParser(HTMLParser) : #customizing Python's built in parser, it essentially just adds all suggestions to list
+                             #works good
 
 
     def __init__(self) :
