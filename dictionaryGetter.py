@@ -5,7 +5,7 @@ from HTMLParser import HTMLParser
 import urllib2
 
 
-class myParser(HTMLParser) : #customizing Python's built in parser, it essentially just adds all links to list
+class myParser(HTMLParser) : #customizing Python's built in parser, it essentially just adds all suggestions to list
 
 
     def __init__(self) :
