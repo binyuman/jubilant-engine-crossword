@@ -1,4 +1,13 @@
-#board {border-collapse: collapse;}
-#board td{height:30px;}
-#board tr{width:2000px;}
-#td1-1 {background-color:black;}
+#board {
+    border-collapse: collapse;
+    margin-left: 25%;
+}
+
+#board td {
+    height: 35px;
+
+}
+
+#td1-1 {
+    background-color:black;
+}
