@@ -10,3 +10,6 @@ https://www.w3schools.com/html/html_tables.asp
 https://stackoverflow.com/questions/6012823/how-to-make-html-table-cell-editable
 
 maybe like this ?
+
+UI :
+to do: hover abilities and evening out squares
