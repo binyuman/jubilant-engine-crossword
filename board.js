@@ -25,6 +25,7 @@ function createBoard(numRows) {
 	var x;
 	for (x = 0; x < numRows; x++) {
 	    var cell = row.insertCell(x);
+	    cell.setAttribute("id","cell"+x+"-"+i);//each cell is named "cell*column*-*row* starting at 0 ofc
 	}
     }
 }
