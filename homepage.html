@@ -10,8 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-
     <style>
       body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -133,61 +131,48 @@
 
   <body>
     <div class = ".container">
+          <div class = "jumbotron" style = "background:indigo">
+	        <div class = "inmid" align="center">
+              <h1 style = "color : white"> Crossworder Pro</h1>
+              <p1 style = "color : white"> the NYTimes has never been closer</p1>
+	        </div>
+          </div>
 
-      <div class = "jumbotron" style = "background:indigo">
-	<div class = "inmid" align="center">
-          <h1 style = "color : white"> Crossworder Pro</h1>
-          <p1 style = "color : white"> the NYTimes has never been closer</p1>
-	</div>
-      </div>
+          <div class="row">
+              <div class="col-lg-4 col-lg-offset-2">
+                  <h3>Word Suggestions</h3>
+                  <p>Never get stuck again with automatic word suggestions built in.</p>
+            </div>
+            <div class="col-lg-4">
+                  <h3>Common Associations</h3>
+                  <p>Writing clues is much easier when you know what people are thinking.</p>
+            </div>
+          </div>
 
-      <div class="row">
-
-	<div class="col-lg-4 col-lg-offset-2">
-          <h3>Word Suggestions</h3>
-          <p>Never get stuck again with automatic word suggestions built in</p>
-	</div>
-
-
-	<div class="col-lg-4">
-          <h3>Common Associations</h3>
-          <p>Writing clues is much easier when you know what people are thinking</p>
-	</div>
-
-      </div>
-
-      <div align="center" style="margin:50px">
-	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-      </div>
+          <div align="center" style="margin:50px">
+	            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+          </div>
 
 
-      <div id="id01" class="modal">
-	
-	<form class="modal-content animate" action="/action_page.php">
-	  <div class="imgcontainer">
-	    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-	  </div>
-	 <div id="labels">
-	    
-	    <label for="uname"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="uname" required>
-
-	    <label for="psw"><b>Password</b></label>
-	    <input  type="password" placeholder="Enter Password" name="psw" required>
-	    
-	    
-	    <button type="submit">Login</button>
-	    
-	  </div>
+         <div id="id01" class="modal">
+	        <form class="modal-content animate" action="/action_page.php">
+	             <div class="imgcontainer">
+	                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	            </div>
+	         <div id="labels">
+	            <label for="uname"><b>Username</b></label>
+	            <input type="text" placeholder="Enter Username" name="uname" required>
+	            <label for="psw"><b>Password</b></label>
+	            <input  type="password" placeholder="Enter Password" name="psw" required>
+	            <button type="submit">Login</button>
+            </div>
 	  
-	  <div id="greyBar" style="background-color:#f1f1f1">
-	    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-	    <span class="psw">New user? Register <a href="#"> here!</a></span>
-
-	    
-	  </div>
-	</form>
-      </div>
+              <div id="greyBar" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">New user? Register <a href="#"> here!</a></span>
+              </div>
+	        </form>
+         </div>
 
       <script>
 
@@ -204,6 +189,9 @@
 	document.getElementById("greyBar").style.margin = "30px";
       </script>
 
-
+        <div align="center">
+            <p3> a b&b production</p3>
+        </div>
+    </div>
   </body>
 </html>
