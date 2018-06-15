@@ -4,7 +4,7 @@ from flask import Flask, Response
 
 app = Flask(__name__)
 
-f = open( "utils/key", 'r' )
+f = open( "key", 'r' )
 
 app.secret_key = f.read();
 f.close
