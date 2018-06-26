@@ -4,7 +4,6 @@ function createBoard(numRows) {
     var oldBoard = document.getElementById("board");
     var newTable = document.createElement("TABLE");
     if (oldBoard) {
-	//alert("table exists");
 	parent.replaceChild(newTable,oldBoard);
 	newTable.setAttribute("id","board");
 	var board = newTable;
