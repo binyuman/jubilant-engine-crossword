@@ -28,8 +28,14 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
-    padding: 10px;
-    background-color: #f44336;
+    margin-left:8px;
+    background-color: #db5d4a;
+}
+
+.registerButton {
+    background-color: #428cf4;
+    float: right;
+    margin-right:8px;
 }
 
 /*position the close button */
@@ -45,7 +51,8 @@ button:hover {
 
 span.psw {
     float: right;
-    padding-top: 16px;
+    padding-right:8px;
+    padding-bottom:8px;
 }
 
 /* The Modal (background) */
@@ -61,6 +68,7 @@ span.psw {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
+    padding-left: 30px;
 }
 
 /* Modal Content/Box */
@@ -70,6 +78,7 @@ span.psw {
     border: 1px solid #888;
     width: 60%; /* Could be more or less, depending on screen size */
 }
+
 
 /* The Close Button (x) */
 .close {
@@ -111,5 +120,7 @@ span.psw {
     }
     .cancelbtn {
 	width: 90%;
+	padding-left:8px;
+	padding-bottom:8px;
     }
 }

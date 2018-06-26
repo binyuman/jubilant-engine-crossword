@@ -14,9 +14,9 @@
   </head>
 
   <body>
+
+    <!--   about   -->
     <div class = ".container">
-
-
       <div class = "jumbotron" style = "background:indigo">
 	<div class = "inmid" align="center">
           <h1 style = "color : white"> Crossworder Pro</h1>
@@ -34,27 +34,27 @@
           <p>Writing clues is much easier when you know what people are thinking.</p>
         </div>
       </div>
+      <!--   /about   -->
 
-
-
-      
+      <!--   login button   -->
       <div align="center" style="margin:50px">
 	<button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
       </div>
+      <!--   /login button   -->
 
 
+      <!-- login popup  -->
       <div id="login" class="modal">
 	
+	<!--   form for styling purposes   -->
 	<form class="modal-content animate" action="/action_page.php">
 
 	  <div class="imgcontainer">
 	    <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
 	  </div>
 
-	  <div id="greyBar" style="background-color:#f1f1f1">
-	    <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-	    <span class="psw">New user? <button onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register here!</button> </span>	    
-	  </div>
+	  
+	  <!-- starting form that validates user's usrnm and pwd  -->
 	  <form data-abide novalidate method="POST" action="{{ url_for('authOrCreate') }}">
 	    <div id="labels">
 	      
@@ -68,42 +68,63 @@
 	      <button type="submit" name="logOrReg" value="login">Login</button>
 	      
 	    </div>
+	    
+	    <div id="greyBar" style="background-color:#f1f1f1">
+
+	      <!--   cancel button   -->
+	      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+	      <!--   /cancel button   -->
+
+
+	      <!-- register button   -->
+	      &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  New user?<button onclick="document.getElementById('register').style.display='block'" style="width:auto;" class="registerButton">Register here!</button> 
+	      <!--   /register button   -->
+
+	    </div>
 	  </form>
+	  <!--   end of both forms styling and user login  -->
+	  
 	</form>
       </div>
 
       <!-- register div -->
       
       <div id="register" class="modal">
-	
-	<form data-abide novalidate method="POST" action="{{ url_for('authOrCreate') }}" class="modal-content animate" action="/action_page.php">
 
-	  <div class="imgcontainer">
+	<!-- form for styling purposes   -->
+	<form class="modal-content animate" action="/action_page.php">
+
+	  <div class="imgcontainer">	    
 	    <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
 	  </div>
-	  <div id="labels">
-	    
-	    <label for="uname"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="username" required>
 
-	    <label for="psw"><b>Password</b></label>
-	    <input  type="password" placeholder="Enter Password" name="password" required>
+	  <!--   form that will submit items for register   -->
+	  <form data-abide novalidate method="POST" action="{{ url_for('authOrCreate') }}">
 	    
+	    <div id="labelsR">
+	      
+	      <label for="uname"><b>Username</b></label>
+	      <input type="text" placeholder="Enter Username" name="username" required>
+
+	      <label for="psw"><b>Password</b></label>
+	      <input  type="password" placeholder="Enter Password" name="password" required>
+	      
+	      
+	      <label for="psw"><b>Re-enter Password</b></label>
+	      <input  type="password" placeholder="Enter same Password" name="pwd" required>
+	      
+	      
+	      <button type="submit" name="logOrReg" value="register">Register</button>
+	      
+	    </div>
 	    
-	    <label for="psw"><b>Re-enter Password</b></label>
-	    <input  type="password" placeholder="Enter same Password" name="pwd" required>
+	    <div id="greyBarR" style="background-color:#f1f1f1">
+	      <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+	    </div>
 	    
-	    
-	    <button type="submit" name="logOrReg" value="register">register</button>
-	    
-	  </div>
+	  </form>
+	  <!--   end of register form  -->
 	  
-	  <div id="greyBar" style="background-color:#f1f1f1">
-	    <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
-
-	    
-	  </div>
-	</form>
       </div>
       
 
